@@ -1,0 +1,142 @@
+# 01-environment — 실제 실행 기록
+
+원본 실행 기록에서 터미널 색상·제목·쉘 메타데이터와 제어문자를 제거한 열람용 사본입니다. 중복 출력은 유지했습니다. 출력 결과를 새로 만들어 넣지 않았습니다.
+
+```text
+Script started on 2026-11-04 06:58:14+09:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ whoami
+
+pwd
+
+cat /etc/os-release
+
+echo "$SHELL"
+
+bash --version
+
+uname -r
+
+git --version
+
+docker --version
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ whoami
+
+pwd
+
+cat /etc/os-release
+
+echo "$SHELL"
+
+bash --version
+
+uname -r
+
+git --version
+
+docker --version
+
+jaehyeong
+/home/jaehyeong/developer-workstation
+PRETTY_NAME="Ubuntu 26.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="26.04"
+VERSION="26.04.1 LTS (Resolute Raccoon)"
+VERSION_CODENAME=resolute
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=resolute
+LOGO=ubuntu-logo
+/bin/bash
+GNU bash, version 5.3.9(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2025 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+6.18.54.1-microsoft-standard-WSL2
+git version 2.53.0
+docker: command not found
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ exit
+
+ls -lh docs/logs/01-environment.txt
+
+tail -n 15 docs/logs/01-environment.txt
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ exit
+
+ls -lh docs/logs/01-environment.txt
+
+tail -n 15 docs/logs/01-environment.txt
+
+exit
+
+Script done on 2026-11-04 06:59:47+09:00 [COMMAND_EXIT_CODE="127"]
+
+```

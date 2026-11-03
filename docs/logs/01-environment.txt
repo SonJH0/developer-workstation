@@ -1,20 +1,36 @@
 Script started on 2026-11-04 06:58:14+09:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
-[?2004h]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [7mwhoami[27m
-[7mpwd[27m
-[7mcat /etc/os-release[27m
-[7mecho "$SHELL"[27m
-[7mbash --version[27m
-[7muname -r[27m
-[7mgit --version[27m
-[7mdocker --version[27m[A[A[A[A[A[A[A]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ whoami
-pwd
-cat /etc/os-release
-echo "$SHELL"
-bash --version
-uname -r
-git --version
-docker --version
-[?2004ljaehyeong
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ whoami
+
+pwd
+
+cat /etc/os-release
+
+echo "$SHELL"
+
+bash --version
+
+uname -r
+
+git --version
+
+docker --version
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ whoami
+
+pwd
+
+cat /etc/os-release
+
+echo "$SHELL"
+
+bash --version
+
+uname -r
+
+git --version
+
+docker --version
+
+jaehyeong
 /home/jaehyeong/developer-workstation
 PRETTY_NAME="Ubuntu 26.04.1 LTS"
 NAME="Ubuntu"
@@ -39,11 +55,81 @@ There is NO WARRANTY, to the extent permitted by law.
 6.18.54.1-microsoft-standard-WSL2
 git version 2.53.0
 docker: command not found
-[?2004h]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [K]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [7mexit[27m
-[7mls -lh docs/logs/01-environment.txt[27m
-[7mtail -n 15 docs/logs/01-environment.txt[27m[A[A]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ exit
-ls -lh docs/logs/01-environment.txt
-tail -n 15 docs/logs/01-environment.txt
-[?2004lexit
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ 
+
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ exit
+
+ls -lh docs/logs/01-environment.txt
+
+tail -n 15 docs/logs/01-environment.txt
+jaehyeong@GNIA-C201-H04:~/developer-workstation$ exit
+
+ls -lh docs/logs/01-environment.txt
+
+tail -n 15 docs/logs/01-environment.txt
+
+exit
 
 Script done on 2026-11-04 06:59:47+09:00 [COMMAND_EXIT_CODE="127"]

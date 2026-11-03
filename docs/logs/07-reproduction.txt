@@ -1,0 +1,204 @@
+Script started on 2026-11-04 07:56:13+09:00 [COMMAND="bash scripts/reproduce.sh" TERM="xterm-256color" TTY="/dev/pts/8" COLUMNS="122" LINES="31"]
+++ dirname scripts/reproduce.sh
++ cd scripts/..
++ docker --version
+Docker version 29.9.2, build a82e528
++ docker info --format 'Server version: {{.ServerVersion}}'
+Server version: 29.9.2
+++ mktemp -d
++ repro_dir=/tmp/tmp.cFYQBhdWCB
++ trap 'rm -rf "$repro_dir"' EXIT
++ mkdir -p /tmp/tmp.cFYQBhdWCB/app
++ cp Dockerfile .dockerignore /tmp/tmp.cFYQBhdWCB/
++ sed 's/Version 2/Version 1/' app/index.html
++ docker build -t workstation-review:v1 /tmp/tmp.cFYQBhdWCB
+[1A[1B[0G[?25l[+] Building 0.0s (0/1)                                                                                    docker:default
+[?25h[1A[0G[?25l[+] Building 0.2s (1/2)                                                                                    docker:default
+[34m => [internal] load build definition from Dockerfile                                                                 0.0s
+[0m[34m => => transferring dockerfile: 105B                                                                                 0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:stable-alpine                                               0.2s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.3s (1/2)                                                                                    docker:default
+[34m => [internal] load build definition from Dockerfile                                                                 0.0s
+[0m[34m => => transferring dockerfile: 105B                                                                                 0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:stable-alpine                                               0.3s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.5s (1/2)                                                                                    docker:default
+[34m => [internal] load build definition from Dockerfile                                                                 0.0s
+[0m[34m => => transferring dockerfile: 105B                                                                                 0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:stable-alpine                                               0.5s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.6s (1/2)                                                                                    docker:default
+[34m => [internal] load build definition from Dockerfile                                                                 0.0s
+[0m[34m => => transferring dockerfile: 105B                                                                                 0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:stable-alpine                                               0.6s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.8s (1/2)                                                                                    docker:default
+[34m => [internal] load build definition from Dockerfile                                                                 0.0s
+[0m[34m => => transferring dockerfile: 105B                                                                                 0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:stable-alpine                                               0.8s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 0.9s (1/2)                                                                                    docker:default
+[34m => [internal] load build definition from Dockerfile                                                                 0.0s
+[0m[34m => => transferring dockerfile: 105B                                                                                 0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:stable-alpine                                               0.9s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 1.1s (1/2)                                                                                    docker:default
+[34m => [internal] load build definition from Dockerfile                                                                 0.0s
+[0m[34m => => transferring dockerfile: 105B                                                                                 0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:stable-alpine                                               1.1s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 1.2s (1/2)                                                                                    docker:default
+[34m => [internal] load build definition from Dockerfile                                                                 0.0s
+[0m[34m => => transferring dockerfile: 105B                                                                                 0.0s
+[0m => [internal] load metadata for docker.io/library/nginx:stable-alpine                                               1.2s
+[?25h[1A[1A[1A[1A[0G[?25l[+] Building 1.3s (2/2)                                                                                    docker:default
+[34m => [internal] load build definition from Dockerfile                                                                 0.0s
+[0m[34m => => transferring dockerfile: 105B                                                                                 0.0s
+[0m[34m => [internal] load metadata for docker.io/library/nginx:stable-alpine                                               1.3s
+[0m[?25h[1A[1A[1A[1A[0G[?25l[+] Building 1.4s (6/6)                                                                                    docker:default
+[34m => [internal] load build definition from Dockerfile                                                                 0.0s
+[0m[34m => => transferring dockerfile: 105B                                                                                 0.0s
+[0m[34m => [internal] load metadata for docker.io/library/nginx:stable-alpine                                               1.3s
+[0m[34m => [internal] load .dockerignore                                                                                    0.0s
+[0m[34m => => transferring context: 68B                                                                                     0.0s
+[0m[34m => [internal] load build context                                                                                    0.0s
+[0m[34m => => transferring context: 452B                                                                                    0.0s
+[0m[34m => CACHED [1/2] FROM docker.io/library/nginx:stable-alpine@sha256:0e52bd054126cdc040b1276c0af347aeb02a41b9cfe305d6  0.0s
+[0m[34m => => resolve docker.io/library/nginx:stable-alpine@sha256:0e52bd054126cdc040b1276c0af347aeb02a41b9cfe305d6094767a  0.0s
+[0m[34m => [2/2] COPY app/ /usr/share/nginx/html/                                                                           0.0s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.5s (6/7)                                                                                    docker:default
+[34m => [internal] load build definition from Dockerfile                                                                 0.0s
+[0m[34m => => transferring dockerfile: 105B                                                                                 0.0s
+[0m[34m => [internal] load metadata for docker.io/library/nginx:stable-alpine                                               1.3s
+[0m[34m => [internal] load .dockerignore                                                                                    0.0s
+[0m[34m => => transferring context: 68B                                                                                     0.0s
+[0m[34m => [internal] load build context                                                                                    0.0s
+[0m[34m => => transferring context: 452B                                                                                    0.0s
+[0m[34m => CACHED [1/2] FROM docker.io/library/nginx:stable-alpine@sha256:0e52bd054126cdc040b1276c0af347aeb02a41b9cfe305d6  0.0s
+[0m[34m => => resolve docker.io/library/nginx:stable-alpine@sha256:0e52bd054126cdc040b1276c0af347aeb02a41b9cfe305d6094767a  0.0s
+[0m[34m => [2/2] COPY app/ /usr/share/nginx/html/                                                                           0.0s
+[0m => exporting to image                                                                                               0.1s
+[34m => => exporting layers                                                                                              0.1s
+[0m[34m => => exporting manifest sha256:859b7803aabd39030a0eb12d63215ade5b437e56f031332157e568f5a46a3999                    0.0s
+[0m[34m => => exporting config sha256:07d7d6c0be8efbe131d517610756094883b420e5dc31c5b8eec9a95b07fc713d                      0.0s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 1.7s (7/7) FINISHED                                                                           docker:default
+[34m => [internal] load build definition from Dockerfile                                                                 0.0s
+[0m[34m => => transferring dockerfile: 105B                                                                                 0.0s
+[0m[34m => [internal] load metadata for docker.io/library/nginx:stable-alpine                                               1.3s
+[0m[34m => [internal] load .dockerignore                                                                                    0.0s
+[0m[34m => => transferring context: 68B                                                                                     0.0s
+[0m[34m => [internal] load build context                                                                                    0.0s
+[0m[34m => => transferring context: 452B                                                                                    0.0s
+[0m[34m => CACHED [1/2] FROM docker.io/library/nginx:stable-alpine@sha256:0e52bd054126cdc040b1276c0af347aeb02a41b9cfe305d6  0.0s
+[0m[34m => => resolve docker.io/library/nginx:stable-alpine@sha256:0e52bd054126cdc040b1276c0af347aeb02a41b9cfe305d6094767a  0.0s
+[0m[34m => [2/2] COPY app/ /usr/share/nginx/html/                                                                           0.0s
+[0m[34m => exporting to image                                                                                               0.2s
+[0m[34m => => exporting layers                                                                                              0.1s
+[0m[34m => => exporting manifest sha256:859b7803aabd39030a0eb12d63215ade5b437e56f031332157e568f5a46a3999                    0.0s
+[0m[34m => => exporting config sha256:07d7d6c0be8efbe131d517610756094883b420e5dc31c5b8eec9a95b07fc713d                      0.0s
+[0m[34m => => exporting attestation manifest sha256:d241bade968b64535329b987f7747a6d40669bfc379fdf2100e6964d836d7cfe        0.0s
+[0m[34m => => exporting manifest list sha256:768a31e5b0242255601b0734c0a51f04c9836e0eb5e854697748942d66b0ae95               0.0s
+[0m[34m => => naming to docker.io/library/workstation-review:v1                                                             0.0s
+[0m[34m => => unpacking to docker.io/library/workstation-review:v1                                                          0.0s
+[0m[?25h+ docker run -d --name workstation-review-web -p 127.0.0.1:8083:80 workstation-review:v1
+d68d57af52e64f55f266256dcf8a4cd5d7678471ecb85d3fdda8e05156c1a731
++ docker run -d --name workstation-review-bind -p 127.0.0.1:8084:80 --mount type=bind,source=/tmp/tmp.cFYQBhdWCB/app,target=/usr/share/nginx/html,readonly workstation-review:v1
+1a45f09c4e4de816199868973146ce0b158224c34fb0963a8848972c35d92d58
++ docker exec workstation-review-web cat /usr/share/nginx/html/index.html
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>개발 워크스테이션</title>
+</head>
+<body>
+  <h1>나의 개발 워크스테이션</h1>
+  <p>작성자: jaehyeong</p>
+  <p>터미널, Docker, Git으로 재현 가능한 개발 환경 만들기</p>
+  <p>Version 1</p>
+</body>
+</html>
++ docker exec workstation-review-bind cat /usr/share/nginx/html/index.html
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>개발 워크스테이션</title>
+</head>
+<body>
+  <h1>나의 개발 워크스테이션</h1>
+  <p>작성자: jaehyeong</p>
+  <p>터미널, Docker, Git으로 재현 가능한 개발 환경 만들기</p>
+  <p>Version 1</p>
+</body>
+</html>
++ sed -i 's/Version 1/Version 2/' /tmp/tmp.cFYQBhdWCB/app/index.html
++ docker exec workstation-review-web cat /usr/share/nginx/html/index.html
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>개발 워크스테이션</title>
+</head>
+<body>
+  <h1>나의 개발 워크스테이션</h1>
+  <p>작성자: jaehyeong</p>
+  <p>터미널, Docker, Git으로 재현 가능한 개발 환경 만들기</p>
+  <p>Version 1</p>
+</body>
+</html>
++ docker exec workstation-review-bind cat /usr/share/nginx/html/index.html
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>개발 워크스테이션</title>
+</head>
+<body>
+  <h1>나의 개발 워크스테이션</h1>
+  <p>작성자: jaehyeong</p>
+  <p>터미널, Docker, Git으로 재현 가능한 개발 환경 만들기</p>
+  <p>Version 2</p>
+</body>
+</html>
++ docker port workstation-review-web
+80/tcp -> 127.0.0.1:8083
++ docker stats --no-stream workstation-review-web workstation-review-bind
+CONTAINER ID   NAME                      CPU %     MEM USAGE / LIMIT     MEM %     NET I/O       BLOCK I/O         PIDS
+d68d57af52e6   workstation-review-web    0.00%     23.33MiB / 15.25GiB   0.15%     694B / 84B    5.5MB / 12.3kB    25
+1a45f09c4e4d   workstation-review-bind   0.00%     21.34MiB / 15.25GiB   0.14%     866B / 126B   8.19kB / 8.19kB   25
++ docker volume create workstation-review-data
+workstation-review-data
++ docker run --name workstation-review-before --mount type=volume,source=workstation-review-data,target=/data ubuntu:24.04 sh -c 'echo "Saved by jaehyeong - persistence test" > /data/proof.txt; cat /data/proof.txt'
+Saved by jaehyeong - persistence test
++ docker rm workstation-review-before
+workstation-review-before
++ docker ps -a --filter name=workstation-review-before
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
++ docker run --name workstation-review-after --mount type=volume,source=workstation-review-data,target=/data ubuntu:24.04 cat /data/proof.txt
+Saved by jaehyeong - persistence test
++ docker volume inspect workstation-review-data
+[
+    {
+        "CreatedAt": "2026-11-03T22:56:18Z",
+        "Driver": "local",
+        "Labels": null,
+        "Mountpoint": "/var/lib/docker/volumes/workstation-review-data/_data",
+        "Name": "workstation-review-data",
+        "Options": null,
+        "Scope": "local"
+    }
+]
++ printf '\nOpen http://localhost:8083 and http://localhost:8084; capture both address bars. Press Enter after inspection.\n'
+
+Open http://localhost:8083 and http://localhost:8084; capture both address bars. Press Enter after inspection.
++ read -r confirmation
+
++ docker stop workstation-review-web workstation-review-bind
+workstation-review-web
+workstation-review-bind
++ docker rm workstation-review-web workstation-review-bind workstation-review-after
+workstation-review-web
+workstation-review-bind
+workstation-review-after
++ rm -rf /tmp/tmp.cFYQBhdWCB
+
+Script done on 2026-11-04 07:58:45+09:00 [COMMAND_EXIT_CODE="0"]

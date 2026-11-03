@@ -1,0 +1,68 @@
+Script started on 2026-11-04 07:03:34+09:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="62"]
+[?2004h]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [7m# 실습용 파일과 디렉토리 생성[27m
+[7mmkdir -p permission-lab/shared[27m
+[7mecho "Permission practice" > permission-lab/sample.txt[27m
+
+[7m# 비교할 초기 권한 설정[27m
+[7mchmod 644 permission-lab/sample.txt[27m
+[7mchmod 755 permission-lab/shared[27m
+
+[7m# 변경 전 확인[27m
+[7mls -l permission-lab/sample.txt[27m
+[7mls -ld permission-lab/shared[27m
+
+[7m# 소유자만 접근하도록 변경[27m
+[7mchmod 600 permission-lab/sample.txt[27m
+[7mchmod 700 permission-lab/shared[27m
+
+[7m# 변경 후 확인[27m
+[7mls -l permission-lab/sample.txt[27m
+[7mls -ld permission-lab/shared[27m
+
+[7m# 숫자와 문자 표기를 함께 확인[27m
+[7mstat -c '%a %A %n' permission-lab/sample.txt permission-lab/shared[27m
+
+[7m# 소유자는 계속 파일을 읽고 디렉토리에 들어갈 수 있는지 확인[27m
+[7mcat permission-lab/sample.txt[27m
+[7mcd permission-lab/shared[27m
+[7mpwd[27m
+[7mcd ../..[27m[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ # 실습용 파일과 디렉토리 생성
+mkdir -p permission-lab/shared
+echo "Permission practice" > permission-lab/sample.txt
+
+# 비교할 초기 권한 설정
+chmod 644 permission-lab/sample.txt
+chmod 755 permission-lab/shared
+
+# 변경 전 확인
+ls -l permission-lab/sample.txt
+ls -ld permission-lab/shared
+
+# 소유자만 접근하도록 변경
+chmod 600 permission-lab/sample.txt
+chmod 700 permission-lab/shared
+
+# 변경 후 확인
+ls -l permission-lab/sample.txt
+ls -ld permission-lab/shared
+
+# 숫자와 문자 표기를 함께 확인
+stat -c '%a %A %n' permission-lab/sample.txt permission-lab/shared
+
+# 소유자는 계속 파일을 읽고 디렉토리에 들어갈 수 있는지 확인
+cat permission-lab/sample.txt
+cd permission-lab/shared
+pwd
+cd ../..
+[?2004l-rw-r--r-- 1 jaehyeong jaehyeong 20 Nov  4 07:03 permission-lab/sample.txt
+drwxr-xr-x 2 jaehyeong jaehyeong 4096 Nov  4 07:03 [0m[01;34mpermission-lab/shared[0m
+-rw------- 1 jaehyeong jaehyeong 20 Nov  4 07:03 permission-lab/sample.txt
+drwx------ 2 jaehyeong jaehyeong 4096 Nov  4 07:03 [0m[01;34mpermission-lab/shared[0m
+600 -rw------- permission-lab/sample.txt
+700 drwx------ permission-lab/shared
+Permission practice
+/home/jaehyeong/developer-workstation/permission-lab/shared
+[?2004h]0;jaehyeong@GNIA-C201-H04: ~/developer-workstation[01;32mjaehyeong@GNIA-C201-H04[00m:[01;34m~/developer-workstation[00m$ [7mexit[27mexit
+[?2004lexit
+
+Script done on 2026-11-04 07:03:48+09:00 [COMMAND_EXIT_CODE="0"]

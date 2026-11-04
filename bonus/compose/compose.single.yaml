@@ -1,0 +1,10 @@
+name: workstation-bonus-single
+
+services:
+  web:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+    image: workstation-bonus-single:v1
+    ports:
+      - "127.0.0.1:8085:80"

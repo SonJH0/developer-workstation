@@ -1,0 +1,23 @@
+name: workstation-bonus-multi
+
+services:
+  web:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+    image: workstation-bonus-multi:v1
+    ports:
+      - "127.0.0.1:8086:80"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1:80"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+
+  helper:
+    image: nginx:stable-alpine
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1:80"]
+      interval: 2s
+      timeout: 3s
+      retries: 15

@@ -1,0 +1,41 @@
+Script started on 2026-11-04 10:02:02+09:00 [COMMAND="bash -xc " git remote -v && git config --get core.sshCommand && git add bonus/ scripts/bonus-single.sh scripts/bonus-multi.sh scripts/bonus-env.sh docs/logs/08-compose-single.txt docs/logs/09-compose-multi.txt docs/logs/10-compose-env.txt && git commit -m \"feat: Compose 단일·다중 서비스와 환경 변수 실습 추가\" && git push origin main && git status "" TERM="xterm-256color" TTY="/dev/pts/8" COLUMNS="122" LINES="46"]
++ git remote -v
+origin	git@github.com:SonJH0/developer-workstation.git (fetch)
+origin	git@github.com:SonJH0/developer-workstation.git (push)
++ git config --get core.sshCommand
+ssh -i ~/.ssh/id_ed25519_workstation -o IdentitiesOnly=yes
++ git add bonus/ scripts/bonus-single.sh scripts/bonus-multi.sh scripts/bonus-env.sh docs/logs/08-compose-single.txt docs/logs/09-compose-multi.txt docs/logs/10-compose-env.txt
++ git commit -m 'feat: Compose 단일·다중 서비스와 환경 변수 실습 추가'
+[main 526d803] feat: Compose 단일·다중 서비스와 환경 변수 실습 추가
+ 10 files changed, 1202 insertions(+)
+ create mode 100644 bonus/compose/compose.env.yaml
+ create mode 100644 bonus/compose/compose.multi.yaml
+ create mode 100644 bonus/compose/compose.single.yaml
+ create mode 100644 bonus/compose/templates/default.conf.template
+ create mode 100644 docs/logs/08-compose-single.txt
+ create mode 100644 docs/logs/09-compose-multi.txt
+ create mode 100644 docs/logs/10-compose-env.txt
+ create mode 100644 scripts/bonus-env.sh
+ create mode 100644 scripts/bonus-multi.sh
+ create mode 100644 scripts/bonus-single.sh
++ git push origin main
+Enumerating objects: 22, done.
+Counting objects:   4% (1/22)Counting objects:   9% (2/22)Counting objects:  13% (3/22)Counting objects:  18% (4/22)Counting objects:  22% (5/22)Counting objects:  27% (6/22)Counting objects:  31% (7/22)Counting objects:  36% (8/22)Counting objects:  40% (9/22)Counting objects:  45% (10/22)Counting objects:  50% (11/22)Counting objects:  54% (12/22)Counting objects:  59% (13/22)Counting objects:  63% (14/22)Counting objects:  68% (15/22)Counting objects:  72% (16/22)Counting objects:  77% (17/22)Counting objects:  81% (18/22)Counting objects:  86% (19/22)Counting objects:  90% (20/22)Counting objects:  95% (21/22)Counting objects: 100% (22/22)Counting objects: 100% (22/22), done.
+Delta compression using up to 24 threads
+Compressing objects:   6% (1/16)Compressing objects:  12% (2/16)Compressing objects:  18% (3/16)Compressing objects:  25% (4/16)Compressing objects:  31% (5/16)Compressing objects:  37% (6/16)Compressing objects:  43% (7/16)Compressing objects:  50% (8/16)Compressing objects:  56% (9/16)Compressing objects:  62% (10/16)Compressing objects:  68% (11/16)Compressing objects:  75% (12/16)Compressing objects:  81% (13/16)Compressing objects:  87% (14/16)Compressing objects:  93% (15/16)Compressing objects: 100% (16/16)Compressing objects: 100% (16/16), done.
+Writing objects:   5% (1/18)Writing objects:  11% (2/18)Writing objects:  16% (3/18)Writing objects:  22% (4/18)Writing objects:  27% (5/18)Writing objects:  33% (6/18)Writing objects:  38% (7/18)Writing objects:  44% (8/18)Writing objects:  50% (9/18)Writing objects:  55% (10/18)Writing objects:  61% (11/18)Writing objects:  72% (13/18)Writing objects:  77% (14/18)Writing objects:  83% (15/18)Writing objects:  88% (16/18)Writing objects:  94% (17/18)Writing objects: 100% (18/18)Writing objects: 100% (18/18), 8.41 KiB | 8.41 MiB/s, done.
+Total 18 (delta 9), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas:   0% (0/9)[Kremote: Resolving deltas:  11% (1/9)[Kremote: Resolving deltas:  22% (2/9)[Kremote: Resolving deltas:  33% (3/9)[Kremote: Resolving deltas:  44% (4/9)[Kremote: Resolving deltas:  55% (5/9)[Kremote: Resolving deltas:  66% (6/9)[Kremote: Resolving deltas:  77% (7/9)[Kremote: Resolving deltas:  88% (8/9)[Kremote: Resolving deltas: 100% (9/9)[Kremote: Resolving deltas: 100% (9/9), completed with 3 local objects.[K
+To github.com:SonJH0/developer-workstation.git
+   c8c8a4d..526d803  main -> main
++ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mdocs/logs/11-ssh-push.txt[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Script done on 2026-11-04 10:02:05+09:00 [COMMAND_EXIT_CODE="0"]

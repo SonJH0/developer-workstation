@@ -14,6 +14,7 @@
 | Docker Desktop | 4.98.0 / WSL Integration 활성화 |
 | Docker CLI·서버 | 29.9.2 |
 | Git | Ubuntu Git 2.53.0 |
+| Docker Compose | v5.6.1 |
 | VS Code | Windows 1.143.1 / WSL 확장 0.104.7 |
 | 컨테이너 사용자 공간 | ubuntu:24.04 → 실습 출력 24.04.5 LTS |
 
@@ -163,7 +164,7 @@ docker volume rm workstation-review-data
 - [x] GitHub에서 README 이미지·로그 링크 정상 열림 확인
 - [x] 평가자가 접근 가능하도록 공개 또는 과제 규칙에 따른 접근 권한 설정
 
-Docker·GitHub 인증용 비밀번호·토큰·개인키는 기록하지 않았습니다. 개인 이메일을 포함한 05-git.txt는 제외하고 마스킹한 설정 사본을 제공합니다. Git 커밋 자체에는 설정한 작성자 이메일이 들어갈 수 있으며 로그 마스킹과는 별개입니다. 보너스 Compose·SSH 실습은 수행하지 않았습니다.
+Docker·GitHub 인증용 비밀번호·토큰·개인키는 기록하지 않았습니다. 개인 이메일을 포함한 05-git.txt는 제외하고 마스킹한 설정 사본을 제공합니다. Git 커밋 자체에는 설정한 작성자 이메일이 들어갈 수 있으며 로그 마스킹과는 별개입니다. 보너스 Compose·환경 변수·SSH 실습도 수행했으며, 실행 결과는 아래 보너스 문서에 정리했습니다.
 
 ## 디렉터리 구조와 설계 기준
 
@@ -200,3 +201,8 @@ Docker·GitHub 인증용 비밀번호·토큰·개인키는 기록하지 않았�
 참고:
 - [Docker 네트워크 개요](https://docs.docker.com/engine/network/)
 - [Docker 포트 공개와 매핑](https://docs.docker.com/engine/network/port-publishing/)
+
+## 보너스 실습 5개 완료
+
+[보너스 구성·실행 방법·실제 결과·캡처](docs/bonus.md)에서 단일 서비스, 다중 서비스 통신, Compose 운영, 환경 변수로 서버 포트 변경, GitHub SSH 인증 및 push 결과를 확인할 수 있습니다. 보너스 설정은 `bonus/compose/`, 실행 스크립트는 `scripts/bonus-*.sh`에 분리했습니다.
+

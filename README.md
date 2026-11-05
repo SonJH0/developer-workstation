@@ -116,6 +116,20 @@ cd /home/jaehyeong/developer-workstation
 pwd
 ```
 
+| 명령 | 컴퓨터에 시키는 일 |
+|---|---|
+| `pwd` | “현재 어느 폴더에 있는지 보여줘.” |
+| `ls -la` | “숨김 파일을 포함해 파일 목록을 자세히 보여줘.” |
+| `mkdir` | “폴더를 만들어줘.” |
+| `cd` | “이 폴더로 이동해줘.” |
+| `touch` | 이번 실습에서는 빈 파일을 만들었어. |
+| `echo` | “이 글자를 출력해줘.” |
+| `cat` | “파일 내용을 보여줘.” |
+| `cp` | “파일을 복사해줘.” |
+| `mv` | “파일을 옮기거나 이름을 바꿔줘.” |
+| `rm` | “파일을 삭제해줘.” |
+| `rmdir` | “빈 폴더를 삭제해줘.” |
+
 **실제 출력 발췌:** .hidden-demo와 empty.txt는 크기 0으로 표시됐고, 복사본 내용도 원본과 같았습니다. 삭제 후 archive에는 .과 ..만 남은 것을 확인하고 빈 폴더를 삭제했습니다.
 
 ```text
@@ -218,6 +232,17 @@ docker logs workstation-hello
 docker images
 ```
 
+| 명령 | 확인한 것 |
+|---|---|
+| `docker pull` | 이미지를 내려받기 |
+| `docker images` | 보관 중인 이미지 목록 |
+| `docker ps` | 실행 중인 컨테이너 목록 |
+| `docker ps -a` | 종료된 것을 포함한 컨테이너 목록 |
+| `docker logs` | 프로그램이 남긴 출력 기록 |
+| `docker stats` | CPU·메모리 등의 사용량 |
+| `docker stop` | 컨테이너 중지 |
+| `docker start` | 중지한 컨테이너 다시 시작 |
+
 ```text
 Hello from Docker!
 This message shows that your installation appears to be working correctly.
@@ -317,6 +342,12 @@ COPY app/ /usr/share/nginx/html/
 EXPOSE 80
 ```
 
+| 줄 | 뜻 |
+|---|---|
+| `FROM nginx:stable-alpine` | 엔진엑스가 준비된 이미지를 바탕으로 사용해. |
+| `COPY app/ /usr/share/nginx/html/` | 내 app 폴더의 내용을 엔진엑스가 페이지를 읽는 위치에 복사해. |
+| `EXPOSE 80` | 이 이미지의 서비스가 내부 80번 포트를 사용한다는 정보를 남겨. |
+
 <details>
 <summary>현재 HTML 소스 전체 펼치기</summary>
 
@@ -347,12 +378,26 @@ docker port workstation-web
 docker logs --tail 20 workstation-web
 ```
 
+| 부분 | 뜻 |
+|---|---|
+| `docker run` | 컨테이너를 만들고 실행해. |
+| `-d` | 터미널을 계속 사용할 수 있도록 백그라운드에서 실행해. |
+| `--name workstation-web` | 컨테이너에 이 이름을 붙여. |
+| `-p 127.0.0.1:8080:80` | 컴퓨터 쪽 8080번과 컨테이너 쪽 80번을 연결해. |
+| `workstation-web:v1` | 이 이미지를 사용해. |
+
 ```text
 # 실제 결과의 핵심 부분 발췌
 80/tcp -> 127.0.0.1:8080
 # 접속 로그에서 필요한 필드 발췌
 "GET / HTTP/1.1" 200 382
 ```
+
+브라우저 주소의 localhost는 자기 컴퓨터를 뜻. localhost:8080을 열었을 때 요청은 다음 순서로 이동.
+1. 브라우저가 컴퓨터의 8080번으로 요청.
+2. 도커가 그 요청을 컨테이너 내부의 80번으로 전달.
+3. 엔진엑스가 HTML을 보냄.
+4. 브라우저가 HTML을 해석해서 화면으로 보여.
 
 빌드 성공과 실행 상태는 아래 화면에서 함께 확인할 수 있습니다. favicon.ico의 404는 아이콘 파일이 없어서 발생했으며, 본문 GET /의 200 응답과 구별했습니다.
 
@@ -464,6 +509,15 @@ docker ps -a --filter name=volume-before
 docker run --name volume-after   --mount type=volume,source=workstation-data,target=/data ubuntu:24.04   cat /data/proof.txt
 docker volume inspect workstation-data
 ```
+
+
+1. workstation-data라는 볼륨을 만듦
+2. 첫 번째 컨테이너의 /data 위치에 연결
+3. 그 안의 proof.txt에 문장을 저장
+4. 첫 번째 컨테이너를 삭제
+5. 새로운 컨테이너를 만들고 같은 볼륨을 연결
+6. proof.txt를 읽자 같은 문장이 나옴
+
 
 ```text
 # 실제 출력의 핵심 부분 발췌
@@ -863,173 +917,6 @@ To github.com:SonJH0/developer-workstation.git
 
 *SSH 주소로 보너스 커밋을 실제 push한 기록.*
 
-<a id="12-재현"></a>
-## 12. 평가자가 다시 확인하려면
-
-### 준비 조건
-
-Docker Desktop이 실행 중이고 WSL Ubuntu 연동이 활성화돼 있어야 합니다. Ubuntu 터미널에서 Git과 docker 명령을 사용합니다. 다른 PC에서는 자신의 홈 폴더를 사용하며, /home/jaehyeong 경로를 그대로 만들 필요는 없습니다.
-
-기본 확인용 복제는 공개 저장소의 HTTPS 주소를 사용하므로 작성자의 SSH 키가 필요하지 않습니다.
-
-```bash
-cd ~
-git clone https://github.com/SonJH0/developer-workstation.git
-cd developer-workstation
-docker --version
-docker info --format 'Server version: {{.ServerVersion}}'
-docker compose version
-```
-
-이미 같은 이름의 폴더가 있다면 새 빈 작업 위치에 복제하거나, 기존 저장소인지 확인한 뒤 사용합니다. Docker 서버 연결에서 권한 오류가 나면 10번 사례처럼 현재 그룹·소켓 권한을 먼저 확인합니다.
-
-### 기본 실험 재현
-
-다음 스크립트는 임시 폴더에 Version 1을 준비하고 COPY·바인드 마운트 비교와 볼륨 데이터 유지 실험을 다시 합니다. 기존 소스 HTML은 수정하지 않습니다.
-
-```bash
-bash scripts/reproduce.sh
-# 또는 실제 명령·출력을 파일로 기록
-# script -q -e -c 'bash scripts/reproduce.sh' docs/logs/07-reproduction-rerun.txt
-```
-
-1. 이미지 빌드와 두 컨테이너 실행 후 임시 호스트 HTML이 Version 2로 바뀝니다.
-2. 브라우저 확인 대기에서 localhost:8083은 Version 1, localhost:8084는 Version 2인지 확인합니다.
-3. 볼륨의 첫 컨테이너 삭제 후 새 컨테이너가 같은 파일을 읽은 출력도 확인합니다.
-4. 확인 후 터미널에서 Enter를 누르면 테스트 컨테이너와 임시 폴더를 정리합니다. 이름 있는 검증 볼륨은 유지합니다.
-
-실제 사용자 PC에서 이 과정을 완료했고 COMMAND_EXIT_CODE="0"을 확인했습니다. 같은 PC에서 별도 임시 빌드 경로와 컨테이너로 검증했으며, 다른 PC에서 실행해 본 결과는 아닙니다.
-
-![재현 스크립트의 컨테이너 정리 및 종료 코드 0.](docs/images/reproduction-exit-zero.png)
-
-*재현 스크립트의 컨테이너 정리 및 종료 코드 0.*
-
-<details>
-<summary>기본 재현 스크립트 전체 펼치기</summary>
-
-```bash
-#!/usr/bin/env bash
-# Fresh names/ports are required; existing resources are not removed automatically.
-set -eu
-set -x
-cd "$(dirname "$0")/.."
-docker --version
-docker info --format 'Server version: {{.ServerVersion}}'
-repro_dir=$(mktemp -d)
-trap 'rm -rf "$repro_dir"' EXIT
-mkdir -p "$repro_dir/app"
-cp Dockerfile .dockerignore "$repro_dir/"
-sed 's/Version 2/Version 1/' app/index.html > "$repro_dir/app/index.html"
-docker build -t workstation-review:v1 "$repro_dir"
-docker run -d --name workstation-review-web -p 127.0.0.1:8083:80 workstation-review:v1
-docker run -d --name workstation-review-bind -p 127.0.0.1:8084:80 --mount "type=bind,source=$repro_dir/app,target=/usr/share/nginx/html,readonly" workstation-review:v1
-docker exec workstation-review-web cat /usr/share/nginx/html/index.html
-docker exec workstation-review-bind cat /usr/share/nginx/html/index.html
-sed -i 's/Version 1/Version 2/' "$repro_dir/app/index.html"
-docker exec workstation-review-web cat /usr/share/nginx/html/index.html
-docker exec workstation-review-bind cat /usr/share/nginx/html/index.html
-docker port workstation-review-web
-docker stats --no-stream workstation-review-web workstation-review-bind
-docker volume create workstation-review-data
-docker run --name workstation-review-before --mount type=volume,source=workstation-review-data,target=/data ubuntu:24.04 sh -c 'echo "Saved by jaehyeong - persistence test" > /data/proof.txt; cat /data/proof.txt'
-docker rm workstation-review-before
-docker ps -a --filter name=workstation-review-before
-docker run --name workstation-review-after --mount type=volume,source=workstation-review-data,target=/data ubuntu:24.04 cat /data/proof.txt
-docker volume inspect workstation-review-data
-printf '\nOpen http://localhost:8083 and http://localhost:8084; capture both address bars. Press Enter after inspection.\n'
-read -r confirmation
-docker stop workstation-review-web workstation-review-bind
-docker rm workstation-review-web workstation-review-bind workstation-review-after
-# The named volume is retained intentionally. See README for explicit deletion.
-```
-
-</details>
-
-### 보너스 재현
-
-11번에 있는 각 스크립트와 정리 명령을 순서대로 사용합니다. 설정 파일도 11번 안에서 확인할 수 있습니다. 환경 변수 스크립트 전체와 나머지 보너스 스크립트도 아래에 수록했습니다.
-
-<details>
-<summary>bonus-single.sh 전체 펼치기</summary>
-
-```bash
-#!/usr/bin/env bash
-set -eux
-cd "$(dirname "$0")/.."
-docker compose -f bonus/compose/compose.single.yaml config
-docker compose -f bonus/compose/compose.single.yaml up -d --build --wait
-docker compose -f bonus/compose/compose.single.yaml ps
-docker compose -f bonus/compose/compose.single.yaml exec -T web wget -qO- http://127.0.0.1:80
-docker compose -f bonus/compose/compose.single.yaml logs --no-color --tail 20
-```
-
-</details>
-
-<details>
-<summary>bonus-multi.sh 전체 펼치기</summary>
-
-```bash
-#!/usr/bin/env bash
-set -eux
-cd "$(dirname "$0")/.."
-docker compose -f bonus/compose/compose.multi.yaml config
-docker compose -f bonus/compose/compose.multi.yaml up -d --build --wait
-docker compose -f bonus/compose/compose.multi.yaml ps
-docker compose -f bonus/compose/compose.multi.yaml exec -T web wget -qO- http://helper:80
-docker compose -f bonus/compose/compose.multi.yaml exec -T helper wget -qO- http://web:80
-docker compose -f bonus/compose/compose.multi.yaml logs --no-color --tail 10
-```
-
-</details>
-
-<details>
-<summary>bonus-env.sh 전체 펼치기</summary>
-
-```bash
-#!/usr/bin/env bash
-set -eux
-cd "$(dirname "$0")/.."
-
-docker compose -f bonus/compose/compose.env.yaml build
-
-for port in 80 8088; do
-    export NGINX_PORT="$port"
-
-    docker compose -f bonus/compose/compose.env.yaml config
-    docker compose -f bonus/compose/compose.env.yaml up -d --force-recreate --wait
-    docker compose -f bonus/compose/compose.env.yaml ps
-    docker compose -f bonus/compose/compose.env.yaml exec -T web printenv NGINX_PORT
-    docker compose -f bonus/compose/compose.env.yaml exec -T web cat /etc/nginx/conf.d/default.conf
-    docker compose -f bonus/compose/compose.env.yaml exec -T web wget -qO- "http://127.0.0.1:$port"
-    docker compose -f bonus/compose/compose.env.yaml port web "$port"
-done
-
-docker compose -f bonus/compose/compose.env.yaml logs --no-color --tail 10
-```
-
-</details>
-
-### 재실행 충돌·정리 주의
-
-| 대상 | 사용하는 이름·포트 | 재실행 전 확인 |
-|---|---|---|
-| 기본 재현 | workstation-review-* / 8083·8084 | 같은 이름과 포트가 사용 중이면 중단 후 확인 |
-| Compose 단일 | workstation-bonus-single / 8085 | 해당 설정의 ps -a로 상태 확인 |
-| Compose 다중 | workstation-bonus-multi / 8086 | 해당 설정의 ps -a로 상태 확인 |
-| Compose 환경 변수 | workstation-bonus-env / 8087 | 내부 포트는 최종 8088 |
-
-기존 서비스를 임의로 강제 삭제하지 않습니다. 기본 스크립트가 중간 실패하면 이번 스크립트가 만든 대상인지 확인한 뒤 아래 이름만 정리합니다. 연결된 임시 폴더가 제거된 상태에서는 기본 스크립트를 처음부터 다시 실행합니다.
-
-```bash
-docker ps -a
-docker rm -f workstation-review-web workstation-review-bind workstation-review-before workstation-review-after
-# 이번 검증 데이터가 더 이상 필요 없을 때만 볼륨 삭제
-docker volume rm workstation-review-data
-```
-
-이름이 없다는 오류는 이미 정리한 대상에서 발생할 수 있습니다. 볼륨 삭제는 저장 데이터 삭제입니다. 원 실습의 workstation-data 볼륨은 별개로 유지했습니다.
-
-사용한 nginx:stable-alpine과 ubuntu:24.04는 갱신 가능한 태그여서 재빌드 시 베이스가 달라질 수 있습니다. 목표는 같은 절차와 동작을 재현하는 것이며 바이트 단위 동일 이미지를 보장하지 않습니다. 이미지 다운로드에는 네트워크가 필요합니다. 원 빌드와 다운로드 기록은 아래 전체 로그에 보관했습니다.
 
 <a id="13-평가-확인표"></a>
 ## 13. 평가 기준별 확인표
@@ -1064,9 +951,7 @@ docker volume rm workstation-review-data
 | README만으로 재현·개인 경로 대안 | 작성·동일 PC 검증 | [12번](#12-재현) |
 | 민감정보 보호 | 원본 설정 로그 제외·이메일 마스킹 | [9번](#09-git), SSH 개인키·암호는 수록하지 않음 |
 
-## 설명을 마칠 때
 
-이번 실습으로 개발 도구를 준비하는 데서 끝나지 않고, **실행이 성공했는지, 변경이 반영되는지, 데이터를 보관할 수 있는지**를 직접 확인했습니다. Git에 소스와 설정을 남기고 명령·출력·사진을 함께 보관해 다른 사람이 같은 과정을 따라 확인할 수 있도록 정리했습니다.
 
 <a id="14-전체-기록"></a>
 ## 14. 추가 사진과 전체 실행 기록
@@ -4555,12 +4440,3 @@ Script done on 2026-11-04 10:02:05+09:00 [COMMAND_EXIT_CODE="0"]
 
 </details>
 
-## 참고한 공식 문서
-
-- [Docker 네트워크와 격리](https://docs.docker.com/engine/network/)
-- [Docker 포트 게시](https://docs.docker.com/engine/network/port-publishing/)
-- [Compose 네트워크와 서비스 이름](https://docs.docker.com/compose/how-tos/networking/)
-- [NGINX 공식 이미지의 환경 변수 템플릿](https://hub.docker.com/_/nginx)
-- [GitHub SSH 인증 확인](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)
-
-공식 문서는 개념 확인용입니다. 이 프로젝트의 수행 여부는 위에 수록한 실제 명령·출력·사진을 근거로 했습니다.
